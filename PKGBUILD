@@ -4,12 +4,12 @@ pkgrel=1
 pkgdesc="AUR build helper"
 arch=('any')
 license=('unknown')
-source=('https://github.com/thatmadhacker/${pkgname}/')
+source=('https://github.com/thatmadhacker/fpm/')
 sha1sums=('SKIP')
 
 build() {
 
-cd "$pkgname"
+cd fpm
 
 ./compile
 
@@ -17,7 +17,7 @@ cd "$pkgname"
 
 package() {
 
-cd "$pkgname"
+cd fpm
 mkdir -p $pkgdir/usr/bin
 install -D -m755 fpm $pkgdir/usr/bin/$pkgname
 
