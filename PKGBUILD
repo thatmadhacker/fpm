@@ -9,15 +9,15 @@ sha1sums=('SKIP')
 
 build() {
 
-cd "$pkgname-$pkgver"
+cd "$pkgname"
 
-./compile
+./compile.sh
 
 }
 
 package() {
 
-cd "$pkgname-$pkgver"
+cd "$pkgname"
 
 mkdir -p $pkgdir/usr/bin
 cp fpm.o $pkgdir/usr/bin/fpm
